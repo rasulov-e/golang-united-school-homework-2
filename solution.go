@@ -14,18 +14,18 @@ type A int
 // CalcSquare(10.0, SidesCircle)
 
 const (
-	Square   A = 4
-	Triangle A = 3
-	Circle   A = 0
+	SidesSquare   A = 4
+	SidesTriangle A = 3
+	SidesCircle   A = 0
 )
 
 func CalcSquare(sideLen float64, sidesNum A) float64 {
 	switch sidesNum {
-	case Square:
+	case SidesSquare:
 		return math.Pow(sideLen, 2)
-	case Triangle:
-		return (sideLen * sideLen) * math.Sqrt(3) / 4
-	case Circle:
+	case SidesTriangle:
+		return (sideLen * sideLen) * (math.Sqrt(3) / 4)
+	case SidesCircle:
 		return math.Pi * (sideLen * sideLen)
 	default:
 		return 0
